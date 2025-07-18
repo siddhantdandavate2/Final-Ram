@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Shield, Award, Users, Clock, ArrowRight, Phone, Calendar } from 'lucide-react';
 import TestimonialCard from '../components/TestimonialCard';
 import InsuranceLogos from '../components/InsuranceLogos';
@@ -48,6 +49,27 @@ const Home = () => {
       text: 'Outstanding care and attention to detail. The team at Maxcare Pain Clinic made me feel comfortable throughout the entire treatment process.'
     }
   ];
+  
+  const treatments = [
+    'Lumbar Epidural Injections',
+    'Cervical Epidural Injections',
+    'Facet Joint Injections',
+    'Medial Branch Blocks',
+    'Radiofrequency Ablation',
+    'Trigger Point Injections',
+    'Botox Injection for Chronic Pain and Headaches',
+    'Qutenza Patch Application',
+    'Spinal Cord Stimulation Referrals',
+    'Lidocaine/Ketamine Infusion for Chronic Pain',
+    'Nerve Root Blocks',
+    'Sacroiliac Joint Injections',
+    'Sympathetic Nerve Blocks',
+    'Occipital Nerve Blocks',
+    'Intercostal Nerve Blocks',
+    'Stellate Ganglion Block',
+    'Joint Denervation for Knee, Hip and Shoulder',
+    'Post Surgical Pain Management',
+  ];
 
   return (
     <div>
@@ -64,19 +86,11 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/book-appointment"
-                className="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                to="/about"
+                className="bg-white bg-opacity-90 text-primary px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
               >
-                <Calendar className="h-5 w-5" />
-                <span>Book Appointment</span>
+                Know More ->
               </Link>
-              <a
-                href="tel:07777106344"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Phone className="h-5 w-5" />
-                <span>Call Now</span>
-              </a>
             </div>
           </div>
         </div>
@@ -138,6 +152,47 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Hero Section for Services - Replaced with a more integrated heading */}
+      <section className="py-5 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 pt-10">Our Services</h2>
+                      </motion.div>
+        </div>
+      </section>
+
+      {/* Main Services */}
+     <section className="bg-gray-50">
+        <div className='max-w-fit mx-auto px-4 sm:px-6 lg:px-8'>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-14 pb-32">
+        {treatments.map((treatment, index) => (
+            <motion.div
+            key={treatment}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary"
+            >
+            <div className="flex items-center">
+            <div className="w-3 h-3 bg-primary rounded-full mr-3"></div>
+            <span className="text-gray-800 font-medium">{treatment}</span>
+            </div>
+            </motion.div>
+        ))}
+        </div>
+
+
+        </div>
+     </section>
+
 
       {/* Insurance Partners */}
       <InsuranceLogos />

@@ -1,105 +1,60 @@
 import React from 'react';
-import { Stethoscope, Pill, Syringe, ArrowRight, PoundSterling, Clock, AlertTriangle } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Phone} from 'lucide-react';
+import { PoundSterling, Clock, AlertTriangle } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 
 const Services = () => {
-  const mainServices = [
-    {
-      icon: Stethoscope,
-      title: 'Consultation & Assessment',
-      description: 'Comprehensive evaluation of your pain condition with detailed medical history review and physical examination.',
-      features: [
-        'Thorough medical history review',
-        'Physical examination and assessment',
-        'Pain evaluation and scoring',
-        'Diagnostic imaging review',
-        'Treatment plan development',
-        'Patient education and counseling'
-      ]
-    },
-    {
-      icon: Pill,
-      title: 'Medication Advice',
-      description: 'Expert guidance on pain medication management, including optimization of current medications and alternative options.',
-      features: [
-        'Medication review and optimization',
-        'Side effect management',
-        'Drug interaction assessment',
-        'Alternative medication options',
-        'Dosage adjustments',
-        'Withdrawal management support'
-      ]
-    },
-    {
-      icon: Syringe,
-      title: 'Injections & Interventions',
-      description: 'Advanced interventional procedures for targeted pain relief using state-of-the-art techniques and equipment.',
-      features: [
-        'Image-guided injections',
-        'Nerve blocks and ablations',
-        'Spinal procedures',
-        'Joint injections',
-        'Trigger point injections',
-        'Advanced pain interventions'
-      ]
-    }
-  ];
-
-  const procedures = [
-    'Epidural Steroid Injections',
+    
+  const treatments = [
+    'Lumbar Epidural Injections',
+    'Cervical Epidural Injections',
     'Facet Joint Injections',
-    'Sacroiliac Joint Injections',
-    'Trigger Point Injections',
-    'Nerve Root Blocks',
-    'Radiofrequency Ablation',
     'Medial Branch Blocks',
+    'Radiofrequency Ablation',
+    'Trigger Point Injections',
+    'Botox Injection for Chronic Pain and Headaches',
+    'Qutenza Patch Application',
+    'Spinal Cord Stimulation Referrals',
+    'Lidocaine/Ketamine Infusion for Chronic Pain',
+    'Nerve Root Blocks',
+    'Sacroiliac Joint Injections',
     'Sympathetic Nerve Blocks',
-    'Intercostal Nerve Blocks',
-    'Piriformis Injections',
-    'Bursa Injections',
-    'Tendon Sheath Injections',
-    'Caudal Epidural Injections',
-    'Transforaminal Epidural Injections',
-    'Celiac Plexus Blocks',
-    'Stellate Ganglion Blocks',
-    'Hypogastric Plexus Blocks',
-    'Pudendal Nerve Blocks',
     'Occipital Nerve Blocks',
-    'Spinal Cord Stimulation Consultation',
-    'Intrathecal Pump Consultation',
-    'Platelet-Rich Plasma (PRP) Injections',
-    'Hyaluronic Acid Injections',
-    'Botulinum Toxin Injections'
+    'Intercostal Nerve Blocks',
+    'Stellate Ganglion Block',
+    'Joint Denervation for Knee, Hip and Shoulder',
+    'Post Surgical Pain Management',
   ];
 
   const feeStructure = [
     {
       service: 'Initial Consultation',
       duration: '60 minutes',
-      price: '£200'
+      price: '£300'
     },
     {
-      service: 'Follow-up Consultation',
+      service: 'Follow-up Appointment Fee',
       duration: '30 minutes',
       price: '£150'
     },
     {
-      service: 'Injection Procedures',
+      service: 'Complex Clinic Consultations',
       duration: '30-60 minutes',
       price: '£300-£500'
     },
-    {
-      service: 'Complex Interventions',
-      duration: '60-90 minutes',
-      price: '£500-£800'
-    }
+    // {
+    //   service: 'Complex Interventions',
+    //   duration: '60-90 minutes',
+    //   price: '£500-£800'
+    // }
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Our Services
           </h1>
@@ -109,40 +64,28 @@ const Services = () => {
         </div>
 
         {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {mainServices.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              features={service.features}
-            />
-          ))}
-        </div>
+     <section className="">
+        <div className='max-w-fit mx-auto px-4 sm:px-6 lg:px-8'>
 
-        {/* Procedures List */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <div className="flex items-center mb-6">
-            <div className="bg-primary/10 rounded-full p-4">
-              <Syringe className="h-8 w-8 text-primary" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-14 pb-32">
+        {treatments.map((treatment, index) => (
+            <motion.div
+            key={treatment}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary"
+            >
+            <div className="flex items-center">
+            <div className="w-3 h-3 bg-primary rounded-full mr-3"></div>
+            <span className="text-gray-800 font-medium">{treatment}</span>
             </div>
-            <h2 className="text-2xl font-bold text-gray-800 ml-4">Procedures & Interventions</h2>
-          </div>
-          
-          <p className="text-gray-600 mb-8">
-            We offer a comprehensive range of interventional pain management procedures, each tailored to address specific pain conditions and patient needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {procedures.map((procedure, index) => (
-              <div key={index} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-                <ArrowRight className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">{procedure}</span>
-              </div>
-            ))}
-          </div>
+            </motion.div>
+        ))}
         </div>
+        </div>
+     </section>
 
         {/* Fees Section */}
         <div className="bg-gray-50 rounded-lg p-8">
@@ -177,27 +120,16 @@ const Services = () => {
                   <div>
                     <h4 className="font-medium text-gray-800">Cancellation Policy</h4>
                     <p className="text-sm text-gray-600 mt-1">
-                      24-hour notice required for cancellations. Late cancellations may incur a fee.
-                    </p>
+                      Appointments cancelled with less than 24 hours notice will incur the full cost of the appointment. Please note that this appointment and the fee paid does not include any treatment and/or investigations.                    </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                  <AlertTriangle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-gray-800">Insurance Coverage</h4>
+                    <h4 className="font-medium text-gray-800">Contact Notice</h4>
                     <p className="text-sm text-gray-600 mt-1">
-                      Most private health insurance plans accepted. Please verify coverage with your provider.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                  <PoundSterling className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium text-gray-800">Payment Options</h4>
-                    <p className="text-sm text-gray-600 mt-1">
-                      We accept cash, card payments, and direct insurance billing where applicable.
+                      Insured patients should contact their insurer directly and please liaise with the secretary Ms Pizzey
                     </p>
                   </div>
                 </div>

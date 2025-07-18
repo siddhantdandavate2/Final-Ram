@@ -14,52 +14,24 @@ const FAQs = () => {
   const faqs = [
     {
       question: "What should I expect during my first consultation?",
-      answer: "Your first consultation will be a comprehensive 60-minute appointment where Dr. Dhotarkar will review your medical history, discuss your pain symptoms in detail, perform a physical examination, and develop a personalized treatment plan. Please bring any relevant medical records, imaging studies, and a list of current medications."
+      answer: "Your first consultation will be a comprehensive 40-minute appointment where Dr. Dhotarkar will review your medical history, discuss your pain symptoms in detail, perform a physical examination, and develop a personalized treatment plan tailored to your specific needs."
     },
     {
-      question: "What types of pain conditions do you treat?",
-      answer: "We treat a wide range of chronic pain conditions including back pain, neck pain, arthritis, fibromyalgia, neuropathic pain, headaches, joint pain, and post-surgical pain. Dr. Dhotarkar specializes in both common and complex pain conditions using evidence-based treatment approaches."
+      question: "Where will be my consultation?",
+      answer: "Currently Dr Dhotarkar runs private  clinics across Berkshire and south Buckinghamshire. The clinics are at  Shelburne hospital clinic High Wycombe , Reading Circle hospital and Berkshire Independent hospital , Reading. The best way to find the earliest and convenient appointment will be to contact the secretary."
     },
     {
-      question: "How long do injection procedures take?",
-      answer: "Most injection procedures take between 30-60 minutes, including preparation and recovery time. The actual injection typically takes only a few minutes. You'll be monitored briefly after the procedure before being discharged with post-procedure instructions."
+      question: "How do I prepare for my appointment?",
+      answer: "Bring a list of current medications, relevant medical records or imaging studies, insurance information, and a detailed description of your pain symptoms including what makes them better or worse. Before appointment You will also fill in a questionnaire sent to you by secretary. This helps for understanding your pain and the impact it is having on various aspects of your life ."
     },
     {
-      question: "Are the injection procedures painful?",
-      answer: "We use local anesthesia to minimize discomfort during injection procedures. Most patients report only mild discomfort during the injection itself. Some temporary soreness at the injection site is normal and typically resolves within a few days."
+      question: "Do you provide ongoing pain management?",
+      answer: "Yes, we provide comprehensive ongoing pain management including regular follow-up appointments, medication management, repeat procedures as needed, and coordination with other healthcare providers in your care team. For your ongoing care , you may have to be referred to local hospital pain clinics for multidisciplinary rehabilitation programme- typically called pain management program."
     },
     {
-      question: "How quickly will I see results from treatment?",
-      answer: "Results vary depending on the type of treatment and individual patient factors. Some patients may experience relief within days, while others may take several weeks to notice improvement. Dr. Dhotarkar will discuss realistic expectations during your consultation."
+      question: "Can I bring a family member or friend to my appointment?",
+      answer: "Absolutely! We encourage patients to bring a support person to appointments, especially for the initial consultation. They can provide emotional support and help you remember important information discussed during the visit. "
     },
-    {
-      question: "Do you accept insurance?",
-      answer: "Yes, we work with most major private health insurance providers including Bupa, AXA Health, Aviva, Vitality, and others. Please contact us to verify your specific coverage. We also accept self-paying patients."
-    },
-    {
-      question: "What is your cancellation policy?",
-      answer: "We require 24-hour notice for appointment cancellations. Cancellations made with less than 24 hours notice may incur a cancellation fee. Emergency cancellations due to illness are handled on a case-by-case basis."
-    },
-    {
-      question: "Can I drive after an injection procedure?",
-      answer: "This depends on the type of injection and whether sedation is used. For most procedures, you may drive home if you feel comfortable and alert. However, for certain procedures or if sedation is used, you'll need someone to drive you home. We'll provide specific instructions for your procedure."
-    },
-    {
-      question: "How often will I need follow-up appointments?",
-      answer: "Follow-up frequency depends on your condition and treatment plan. Initial follow-ups are typically scheduled within 2-4 weeks after starting treatment. Once your condition is stable, appointments may be spaced further apart, often every 3-6 months."
-    },
-    {
-      question: "What should I bring to my appointment?",
-      answer: "Please bring a valid ID, insurance card (if applicable), list of current medications, any relevant medical records or imaging studies, and a list of questions you'd like to discuss. Wear comfortable, loose-fitting clothing that allows access to the treatment area."
-    },
-    {
-      question: "Do you offer emergency appointments?",
-      answer: "While we don't provide emergency services, we do our best to accommodate urgent appointments when possible. For medical emergencies, please contact your GP or visit the nearest A&E department. For urgent pain management needs, please call our clinic."
-    },
-    {
-      question: "Can you help with medication management?",
-      answer: "Yes, medication management is a key part of our comprehensive pain management approach. Dr. Dhotarkar can review your current medications, optimize dosages, suggest alternatives, and help manage side effects while working with your GP."
-    }
   ];
 
   return (
