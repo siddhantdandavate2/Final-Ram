@@ -94,7 +94,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-<div className='rounded-full w-[430px] h-[430px] mb-2 border-4 border-white'>
+<div className='rounded-full w-[420px] h-[425px] mb-2 border-4 border-white'>
   <img className='rounded-full w-full h-full object-cover object-[50%_36%]' src="photo.jpg" alt="Clinic Photo" />
 </div>
 
