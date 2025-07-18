@@ -53,7 +53,7 @@ const FAQs = () => {
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left p-6 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
+                className="w-full text-left p-6 hover:bg-gray-50 transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-semibold text-gray-800 pr-4">

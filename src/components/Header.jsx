@@ -18,11 +18,14 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-gray-100 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
+            <div className='mr-4'>
+              <img className='w-20' src="new_logo.png" alt="" />
+            </div>
             <Link to="/" className="text-2xl font-bold text-gray-800">
               <span className="text-primary">Maxcare</span> Pain Clinic
             </Link>

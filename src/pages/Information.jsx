@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Download, FileText, Pill, Syringe, Shield, AlertTriangle } from 'lucide-react';
 
 const Information = () => {
@@ -57,45 +58,6 @@ const Information = () => {
     }
   ];
 
-  const downloadableResources = [
-    {
-      title: 'Pre-Appointment Preparation Guide',
-      description: 'Essential information to help you prepare for your consultation',
-      type: 'PDF',
-      size: '1.2 MB'
-    },
-    {
-      title: 'Pain Diary Template',
-      description: 'Track your pain levels and triggers to help with treatment planning',
-      type: 'PDF',
-      size: '0.8 MB'
-    },
-    {
-      title: 'Medication List Template',
-      description: 'Organize your current medications for your appointment',
-      type: 'PDF',
-      size: '0.5 MB'
-    },
-    {
-      title: 'Post-Procedure Care Instructions',
-      description: 'General care instructions following injection procedures',
-      type: 'PDF',
-      size: '1.5 MB'
-    },
-    {
-      title: 'Exercise Guide for Chronic Pain',
-      description: 'Safe exercises and activities for pain management',
-      type: 'PDF',
-      size: '2.1 MB'
-    },
-    {
-      title: 'Understanding Your Treatment Plan',
-      description: 'Guide to help you understand and follow your treatment plan',
-      type: 'PDF',
-      size: '1.3 MB'
-    }
-  ];
-
   return (
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,57 +96,73 @@ const Information = () => {
           ))}
         </div>
 
-        {/* Downloadable Resources */}
-        <div className="bg-gray-50 rounded-lg p-8 mb-16">
-          <div className="flex items-center mb-8">
-            <div className="bg-primary/10 rounded-full p-4">
-              <Download className="h-8 w-8 text-primary" />
-            </div>
-            <h2 className="text-2xl font-bold text-gray-800 ml-4">Downloadable Resources</h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {downloadableResources.map((resource, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start justify-between mb-4">
-                  <FileText className="h-8 w-8 text-primary flex-shrink-0" />
-                  <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                    {resource.type} • {resource.size}
-                  </span>
-                </div>
-                
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{resource.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{resource.description}</p>
-                
-                <button className="w-full bg-gradient-to-r from-primary to-cyan-400 text-white py-2 px-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                  <Download className="h-4 w-4" />
-                  <span>Download</span>
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Important Notice */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8">
-          <div className="flex items-start space-x-4">
-            <AlertTriangle className="h-8 w-8 text-yellow-600 flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="text-xl font-bold text-yellow-800 mb-4">Important Medical Disclaimer</h3>
-              <div className="space-y-3 text-yellow-700">
-                <p>
-                  The information provided in these resources is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment.
-                </p>
-                <p>
-                  Always consult with Dr. Dhotarkar or your healthcare provider before making any changes to your treatment plan or medication regimen.
-                </p>
-                <p>
-                  If you experience severe pain, unexpected side effects, or have concerns about your condition, please contact our clinic immediately or seek emergency medical attention if necessary.
-                </p>
+      {/* Additional Information */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-blue-50 rounded-xl p-8"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Medication Information</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Before Procedures</h4>
+                  <ul className="space-y-1 text-sm text-gray-600">
+                    <li>• Continue most medications as usual</li>
+                    <li>• Stop blood thinners as directed</li>
+                    <li>• Inform us of all supplements</li>
+                    <li>• Follow specific pre-procedure instructions</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">After Procedures</h4>
+                  <ul className="space-y-1 text-sm text-gray-600">
+                    <li>• Resume medications as directed</li>
+                    <li>• Take prescribed medications as instructed</li>
+                    <li>• Report any adverse reactions</li>
+                    <li>• Follow up with medication adjustments</li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-amber-50 rounded-xl p-8"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recovery Guidelines</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Immediate Post-Procedure</h4>
+                  <ul className="space-y-1 text-sm text-gray-600">
+                    <li>• Rest for the first 24 hours</li>
+                    <li>• Apply ice as directed</li>
+                    <li>• Monitor injection site</li>
+                    <li>• Avoid strenuous activities</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Return to Activities</h4>
+                  <ul className="space-y-1 text-sm text-gray-600">
+                    <li>• Light activities after 24 hours</li>
+                    <li>• Normal activities in 2-3 days</li>
+                    <li>• Exercise as tolerated</li>
+                    <li>• Follow individual guidelines</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
+      </section>
 
         {/* Contact for More Information */}
         <div className="mt-16 bg-gradient-to-r from-primary to-cyan-400 rounded-lg p-8 text-white text-center">

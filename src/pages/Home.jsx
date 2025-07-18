@@ -76,15 +76,15 @@ const Home = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-cyan-400 text-white py-16 flex items-center justify-center px-48">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <div className="text-start">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Welcome to <span className="text-white">Maxcare</span> Pain Clinic
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Specialized pain management services providing compassionate care and effective treatments 
-              to help you live pain-free
+            <p className="text-xl md:text-2xl mb-8 ml-2 max-w-3xl mx-auto opacity-90">
+              Led by Dr. Ram Dhotarkar, Maxcare Pain Clinic specializes in comprehensive pain management 
+              services. 
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
                 to="/about"
                 className="bg-white bg-opacity-90 text-primary px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
@@ -94,22 +94,23 @@ const Home = () => {
             </div>
           </div>
         </div>
-<div className='rounded-full w-[430px] h-[440px] mb-2 border-4 border-white'>
-  <img className='rounded-full w-full h-full object-cover object-[50%_40%]' src="photo.jpg" alt="Clinic Photo" />
+<div className='rounded-full w-[430px] h-[430px] mb-2 border-4 border-white'>
+  <img className='rounded-full w-full h-full object-cover object-[50%_36%]' src="photo.jpg" alt="Clinic Photo" />
 </div>
 
       </section>
 
       {/* Brief Intro Section */}
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               About Maxcare Pain Clinic
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Led by Dr. Ram Dhotarkar, Maxcare Pain Clinic specializes in comprehensive pain management 
-              services. We combine advanced medical expertise with compassionate care to provide effective 
+              Specialized pain management services providing compassionate care and effective treatments 
+              to help you live pain-free.
+              We combine advanced medical expertise in providing effective 
               solutions for chronic pain conditions. Our clinic offers consultation, medication management, 
               and specialized injection therapies to help patients regain their quality of life.
             </p>
