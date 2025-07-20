@@ -73,7 +73,7 @@ const BookAppointment = () => {
 
   return (
     <div className="py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -96,7 +96,7 @@ const BookAppointment = () => {
             </p>
             <a
               href="tel:07777106344"
-              className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+              className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
             >
               <Phone className="h-4 w-4" />
               <span>07777106344</span>
@@ -113,7 +113,7 @@ const BookAppointment = () => {
             </p>
             <a
               href="mailto:vedantgolegaonkar@gmail.com"
-              className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+              className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
             >
               <Mail className="h-4 w-4" />
               <span>Send Email</span>
@@ -128,7 +128,7 @@ const BookAppointment = () => {
             <h2 className="text-2xl font-bold text-gray-800">Request an Appointment</h2>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 w-full">
             {/* Personal Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -142,7 +142,7 @@ const BookAppointment = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -158,7 +158,7 @@ const BookAppointment = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -175,7 +175,7 @@ const BookAppointment = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                 placeholder="Enter your email address"
               />
             </div>
@@ -192,7 +192,7 @@ const BookAppointment = () => {
                   name="datePreference"
                   value={formData.datePreference}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                 />
               </div>
 

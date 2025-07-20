@@ -51,109 +51,116 @@ const Services = () => {
   ];
 
   return (
-    <div className="py-16 pt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive pain management services tailored to your individual needs and condition
-          </p>
-        </div>
+  <div className="py-16 pt-24 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <div className="max-w-7xl mx-auto">
 
-        {/* Main Services */}
-     <section className="">
-        <div className='max-w-fit mx-auto px-4 sm:px-6 lg:px-8'>
+      {/* Header */}
+      <div className="text-center mb-12 sm:mb-16">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Our Services
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive pain management services tailored to your individual needs and condition
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-14 pb-32">
-        {treatments.map((treatment, index) => (
-            <motion.div
-            key={treatment}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
-            viewport={{ once: true }}
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary"
-            >
-            <div className="flex items-center">
-            <div className="w-3 h-3 bg-primary rounded-full mr-3"></div>
-            <span className="text-gray-800 font-medium">{treatment}</span>
-            </div>
-            </motion.div>
-        ))}
-        </div>
-        </div>
-     </section>
-
-        {/* Fees Section */}
-        <div className="bg-gray-50 rounded-lg p-8">
-          <div className="flex items-center mb-6">
-            <div className="bg-primary/10 rounded-full p-4">
-              <PoundSterling className="h-8 w-8 text-primary" />
-            </div>
-            <h2 className="text-2xl font-bold text-gray-800 ml-4">Fees & Pricing</h2>
+      {/* Main Services */}
+      <section>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-6 md:p-10">
+            {treatments.map((treatment, index) => (
+              <motion.div
+                key={treatment}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="bg-white p-5 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary"
+              >
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-primary rounded-full mr-3" />
+                  <span className="text-gray-800 font-medium text-sm sm:text-base">
+                    {treatment}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Service Fees</h3>
-              <div className="space-y-4">
-                {feeStructure.map((item, index) => (
-                  <div key={index} className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
-                    <div>
-                      <h4 className="font-medium text-gray-800">{item.service}</h4>
-                      <p className="text-sm text-gray-500">{item.duration}</p>
-                    </div>
-                    <span className="text-lg font-bold text-primary">{item.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Important Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                  <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+        </div>
+      </section>
+
+      {/* Fees Section */}
+      <div className="bg-gray-50 rounded-lg p-6 sm:p-8 mt-12">
+        <div className="flex items-center mb-6">
+          <div className="bg-primary/10 rounded-full p-3 sm:p-4">
+            <PoundSterling className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+          </div>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 ml-4">Fees & Pricing</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8">
+          {/* Service Fees */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Service Fees</h3>
+            <div className="space-y-4">
+              {feeStructure.map((item, index) => (
+                <div key={index} className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
                   <div>
-                    <h4 className="font-medium text-gray-800">Cancellation Policy</h4>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Appointments cancelled with less than 24 hours notice will incur the full cost of the appointment. Please note that this appointment and the fee paid does not include any treatment and/or investigations.                    </p>
+                    <h4 className="font-medium text-gray-800">{item.service}</h4>
+                    <p className="text-sm text-gray-500">{item.duration}</p>
                   </div>
+                  <span className="text-base sm:text-lg font-bold text-primary">{item.price}</span>
                 </div>
-                
-                <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                  <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium text-gray-800">Contact Notice</h4>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Insured patients should contact their insurer directly and please liaise with the secretary Ms Pizzey
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-          
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-            <div className="flex items-start space-x-3">
-              <AlertTriangle className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-medium text-yellow-800">Special Note</h4>
-                <p className="text-sm text-yellow-700 mt-1">
-                  Fees may vary based on the complexity of the procedure and individual patient needs. 
-                  A detailed quote will be provided during your consultation. Please contact us for 
-                  specific pricing information regarding complex interventional procedures.
-                </p>
+
+          {/* Important Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Important Information</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
+                <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-medium text-gray-800">Cancellation Policy</h4>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Appointments cancelled with less than 24 hours notice will incur the full cost of the appointment.
+                    This appointment and the fee paid do not include treatment or investigations.
+                  </p>
+                </div>
               </div>
+
+              <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
+                <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-medium text-gray-800">Contact Notice</h4>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Insured patients should contact their insurer directly and liaise with secretary Ms Pizzey.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Special Note */}
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5 sm:p-6">
+          <div className="flex items-start space-x-3">
+            <AlertTriangle className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
+            <div>
+              <h4 className="font-medium text-yellow-800">Special Note</h4>
+              <p className="text-sm text-yellow-700 mt-1">
+                Fees may vary based on procedure complexity and individual needs. A detailed quote will be provided during your consultation. Contact us for specific pricing on complex interventional procedures.
+              </p>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
-  );
+  </div>
+);
+
 };
 
 export default Services;
