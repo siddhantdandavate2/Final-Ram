@@ -105,9 +105,9 @@ const Home = () => {
         </div>
       </div>
       <div className="flex-1 flex justify-center">
-        <div className="rounded-full w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[425px] border-4 border-[#F5EFEB] overflow-hidden">
+        <div className="rounded-full w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[425px] border-2 border-[#F5EFEB] overflow-hidden">
           <img
-            className="w-full h-full object-cover object-[50%_36%]"
+            className="w-full h-full object-cover object-[50%_36%] image-smooth"
             src="photo.jpg"
             alt="Clinic Photo"
           />
