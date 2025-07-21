@@ -40,14 +40,14 @@ const FAQs = () => {
   ];
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <div className="py-16 px-4 sm:px-6 lg:px-8 overflow-x-hidden bg-[#F5EFEB]">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#567c8d] mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600">
+          <p className="text-base sm:text-lg md:text-xl text-[#567c8d]">
             Find answers to common questions about our services and what to
             expect
           </p>
@@ -58,27 +58,27 @@ const FAQs = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-[#F5EFEB] rounded-lg shadow-md overflow-hidden"
             >
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left px-4 sm:px-6 py-5 sm:py-6 hover:bg-gray-50 transition-colors"
+                className="w-full text-left px-4 sm:px-6 py-5 sm:py-6 hover:bg-[#567c8d]/10 transition-colors"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-800 pr-4">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#567c8d] pr-4">
                     {faq.question}
                   </h3>
                   {openItems[index] ? (
-                    <ChevronUp className="h-5 w-5 text-primary flex-shrink-0" />
+                    <ChevronUp className="h-5 w-5 text-[#567c8d] flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="h-5 w-5 text-primary flex-shrink-0" />
+                    <ChevronDown className="h-5 w-5 text-[#567c8d] flex-shrink-0" />
                   )}
                 </div>
               </button>
 
               {openItems[index] && (
                 <div className="px-4 sm:px-6 pb-5 sm:pb-6">
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#567c8d] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ const FAQs = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-16 bg-gradient-to-r from-primary to-cyan-400 rounded-lg px-6 sm:px-8 py-10 text-white text-center">
+        <div className="mt-16 bg-[#567c8d] rounded-lg px-6 sm:px-8 py-10 text-[#F5EFEB] text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center mb-6 space-y-2 sm:space-y-0 sm:space-x-3">
             <HelpCircle className="h-7 w-7 sm:h-8 sm:w-8" />
             <h2 className="text-xl sm:text-2xl font-bold">
@@ -103,13 +103,13 @@ const FAQs = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:07777106344"
-              className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-center"
+              className="bg-[#F5EFEB] text-[#567c8d] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-center"
             >
               Call Us: 07777106344
             </a>
             <a
               href="mailto:admin@berkshirepainclinic.co.uk"
-              className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300 text-center"
+              className="border-2 border-[#F5EFEB] text-[#F5EFEB] px-6 py-3 rounded-full font-semibold hover:bg-[#F5EFEB] hover:text-[#567c8d] transition-all duration-300 text-center"
             >
               Email Us
             </a>

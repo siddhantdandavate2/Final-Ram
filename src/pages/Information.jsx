@@ -70,14 +70,14 @@ const Information = () => {
   ];
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-[#F5EFEB]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#567c8d] mb-4">
             Patient Information
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-[#567c8d] max-w-3xl mx-auto">
             Educational resources and downloadable materials to help you
             understand your condition and treatment options
           </p>
@@ -88,24 +88,24 @@ const Information = () => {
           {informationSections.map((section, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 sm:p-8"
+              className="bg-[#F5EFEB] rounded-xl shadow-lg p-6 sm:p-8"
             >
               <div className="flex items-center mb-5">
-                <div className="bg-primary/10 rounded-full p-3 sm:p-4">
-                  <section.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+                <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
+                  <section.icon className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
                 </div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-800 ml-4">
+                <h2 className="text-lg sm:text-xl font-bold text-[#567c8d] ml-4">
                   {section.title}
                 </h2>
               </div>
-              <p className="text-gray-600 text-sm sm:text-base mb-5">
+              <p className="text-[567c8d] text-sm sm:text-base mb-5">
                 {section.description}
               </p>
               <div className="space-y-3">
                 {section.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="flex items-center space-x-3">
-                    <FileText className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-gray-700 text-sm sm:text-base">
+                    <FileText className="h-4 w-4 text-[#567c8d] flex-shrink-0" />
+                    <span className="text-[#567c8d] text-sm sm:text-base">
                       {item}
                     </span>
                   </div>
@@ -116,7 +116,7 @@ const Information = () => {
         </div>
 
         {/* Medication + Recovery Guidelines */}
-        <section className="py-16 sm:py-20 bg-gray-50">
+        <section className="py-16 sm:py-20 bg-[#F5EFEB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* Medication Info */}
@@ -125,17 +125,17 @@ const Information = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-blue-50 rounded-xl p-6 sm:p-8"
+                className="bg-[#F5EFEB] rounded-xl p-6 sm:p-8"
               >
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#567c8d] mb-5">
                   Medication Information
                 </h3>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
+                    <h4 className="font-semibold text-[#567c8d] mb-2">
                       Before Procedures
                     </h4>
-                    <ul className="space-y-1 text-sm text-gray-600">
+                    <ul className="space-y-1 text-sm text-[#567c8d]">
                       <li>• Continue most medications as usual</li>
                       <li>• Stop blood thinners as directed</li>
                       <li>• Inform us of all supplements</li>
@@ -143,10 +143,10 @@ const Information = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
+                    <h4 className="font-semibold text-[#567c8d] mb-2">
                       After Procedures
                     </h4>
-                    <ul className="space-y-1 text-sm text-gray-600">
+                    <ul className="space-y-1 text-sm text-[#567c8d]">
                       <li>• Resume medications as directed</li>
                       <li>• Take prescribed medications as instructed</li>
                       <li>• Report any adverse reactions</li>
@@ -162,17 +162,17 @@ const Information = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-amber-50 rounded-xl p-6 sm:p-8"
+                className="bg-[#F5EFEB] rounded-xl p-6 sm:p-8"
               >
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#567c8d] mb-5">
                   Recovery Guidelines
                 </h3>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
+                    <h4 className="font-semibold text-[#567c8d] mb-2">
                       Immediate Post-Procedure
                     </h4>
-                    <ul className="space-y-1 text-sm text-gray-600">
+                    <ul className="space-y-1 text-sm text-[#567c8d]">
                       <li>• Rest for the first 24 hours</li>
                       <li>• Apply ice as directed</li>
                       <li>• Monitor injection site</li>
@@ -180,10 +180,10 @@ const Information = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
+                    <h4 className="font-semibold text-[#567c8d] mb-2">
                       Return to Activities
                     </h4>
-                    <ul className="space-y-1 text-sm text-gray-600">
+                    <ul className="space-y-1 text-sm text-[#567c8d]">
                       <li>• Light activities after 24 hours</li>
                       <li>• Normal activities in 2–3 days</li>
                       <li>• Exercise as tolerated</li>
@@ -197,7 +197,7 @@ const Information = () => {
         </section>
 
         {/* Contact */}
-        <div className="mt-16 bg-gradient-to-r from-primary to-cyan-400 rounded-xl px-6 py-10 text-white text-center">
+        <div className="mt-16 bg-[#567c8d] rounded-xl px-6 py-10 text-[#F5EFEB] text-center">
           <h2 className="text-xl sm:text-2xl font-bold mb-4">
             Need More Information?
           </h2>
@@ -208,13 +208,13 @@ const Information = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:07777106344"
-              className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-[#F5EFEB] text-[#567c8d] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               Call Us: 07777106344
             </a>
             <a
               href="mailto:admin@berkshirepainclinic.co.uk"
-              className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300"
+              className="border-2 border-[#F5EFEB] text-[#F5EFEB] px-6 py-3 rounded-full font-semibold hover:bg-[#F5EFEB] hover:text-[#567c8d] transition-all duration-300"
             >
               Email for Resources
             </a>

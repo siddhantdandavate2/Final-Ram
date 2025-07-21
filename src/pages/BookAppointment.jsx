@@ -72,21 +72,21 @@ const BookAppointment = () => {
   ];
 
   return (
-    <div className="py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+    <div className="py-16 bg-[#F5EFEB]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 bg-[#F5EFEB]">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#567c8d] mb-6">
             Book Your Appointment
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-[#567c8d] max-w-2xl mx-auto">
             Schedule your consultation with Dr. Ram Dhotarkar and take the first step towards pain relief
           </p>
         </div>
 
         {/* Quick Contact Options */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-gradient-to-r from-primary to-cyan-400 rounded-lg p-6 text-white">
+          <div className="bg-[#567c8d] rounded-lg p-6 text-[#F5EFEB]">
             <div className="flex items-center mb-4">
               <Phone className="h-8 w-8 mr-3" />
               <h3 className="text-xl font-bold">Call to Book</h3>
@@ -96,14 +96,14 @@ const BookAppointment = () => {
             </p>
             <a
               href="tel:07777106344"
-              className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
+              className="bg-[#F5EFEB] text-[#567c8d] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
             >
               <Phone className="h-4 w-4" />
               <span>07777106344</span>
             </a>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6 text-white">
+          <div className="bg-[#2f4156] rounded-lg p-6 text-[#F5EFEB]">
             <div className="flex items-center mb-4">
               <Mail className="h-8 w-8 mr-3" />
               <h3 className="text-xl font-bold">Email Us</h3>
@@ -113,7 +113,7 @@ const BookAppointment = () => {
             </p>
             <a
               href="mailto:vedantgolegaonkar@gmail.com"
-              className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
+              className="bg-[#F5EFEB] text-[#2f4156] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center w-full sm:w-auto space-x-2"
             >
               <Mail className="h-4 w-4" />
               <span>Send Email</span>
@@ -122,17 +122,17 @@ const BookAppointment = () => {
         </div>
 
         {/* Appointment Request Form */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <div className="bg-[#F5EFEB] rounded-lg shadow-lg p-8 mb-12">
           <div className="flex items-center mb-6">
-            <Calendar className="h-8 w-8 text-primary mr-3" />
-            <h2 className="text-2xl font-bold text-gray-800">Request an Appointment</h2>
+            <Calendar className="h-8 w-8 text-[#567c8d] mr-3" />
+            <h2 className="text-2xl font-bold text-[#567c8d]">Request an Appointment</h2>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6 w-full">
             {/* Personal Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-[#567c8d] mb-2">
                   Full Name *
                 </label>
                 <input
@@ -142,13 +142,13 @@ const BookAppointment = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                   placeholder="Enter your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-[#567c8d] mb-2">
                   Phone Number *
                 </label>
                 <input
@@ -158,14 +158,14 @@ const BookAppointment = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                   placeholder="Enter your phone number"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-[#567c8d] mb-2">
                 Email Address *
               </label>
               <input
@@ -175,7 +175,7 @@ const BookAppointment = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 placeholder="Enter your email address"
               />
             </div>
@@ -183,7 +183,7 @@ const BookAppointment = () => {
             {/* Appointment Details */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="datePreference" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="datePreference" className="block text-sm font-medium text-[#567c8d] mb-2">
                   Preferred Date
                 </label>
                 <input
@@ -192,12 +192,12 @@ const BookAppointment = () => {
                   name="datePreference"
                   value={formData.datePreference}
                   onChange={handleChange}
-                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="timePreference" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="timePreference" className="block text-sm font-medium text-[#567c8d] mb-2">
                   Preferred Time
                 </label>
                 <select
@@ -205,7 +205,7 @@ const BookAppointment = () => {
                   name="timePreference"
                   value={formData.timePreference}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 >
                   <option value="">Select preferred time</option>
                   {timeSlots.map((time) => (
@@ -217,7 +217,7 @@ const BookAppointment = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="appointmentType" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="appointmentType" className="block text-sm font-medium text-[#567c8d] mb-2">
                   Appointment Type *
                 </label>
                 <select
@@ -226,7 +226,7 @@ const BookAppointment = () => {
                   value={formData.appointmentType}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 >
                   <option value="">Select appointment type</option>
                   {appointmentTypes.map((type) => (
@@ -236,7 +236,7 @@ const BookAppointment = () => {
               </div>
 
               <div>
-                <label htmlFor="insurance" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="insurance" className="block text-sm font-medium text-[#567c8d] mb-2">
                   Insurance Provider
                 </label>
                 <select
@@ -244,7 +244,7 @@ const BookAppointment = () => {
                   name="insurance"
                   value={formData.insurance}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 >
                   <option value="">Select insurance provider</option>
                   {insuranceOptions.map((provider) => (
@@ -256,7 +256,7 @@ const BookAppointment = () => {
 
             {/* Medical Information */}
             <div>
-              <label htmlFor="painCondition" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="painCondition" className="block text-sm font-medium text-[#567c8d] mb-2">
                 Pain Condition/Symptoms *
               </label>
               <textarea
@@ -266,13 +266,13 @@ const BookAppointment = () => {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 placeholder="Please describe your pain condition, symptoms, and how long you've been experiencing them..."
               ></textarea>
             </div>
 
             <div>
-              <label htmlFor="previousTreatment" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="previousTreatment" className="block text-sm font-medium text-[#567c8d] mb-2">
                 Previous Treatment
               </label>
               <textarea
@@ -281,13 +281,13 @@ const BookAppointment = () => {
                 value={formData.previousTreatment}
                 onChange={handleChange}
                 rows={3}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 placeholder="Please describe any previous treatments, medications, or procedures you've had for this condition..."
               ></textarea>
             </div>
 
             <div>
-              <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="additionalInfo" className="block text-sm font-medium text-[#567c8d] mb-2">
                 Additional Information
               </label>
               <textarea
@@ -296,14 +296,14 @@ const BookAppointment = () => {
                 value={formData.additionalInfo}
                 onChange={handleChange}
                 rows={3}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#567c8d] focus:border-transparent transition-colors"
                 placeholder="Any additional information or special requirements..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-primary to-cyan-400 text-white py-4 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 text-lg font-semibold"
+              className="w-full bg-[#567c8d] text-[#F5EFEB] py-4 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 text-lg font-semibold"
             >
               <Calendar className="h-5 w-5" />
               <span>Request Appointment</span>
@@ -313,7 +313,7 @@ const BookAppointment = () => {
 
         {/* Important Information */}
         <div className="space-y-6">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+          <div className="bg-green-100 border border-green-200 rounded-lg p-6">
             <div className="flex items-start space-x-3">
               <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
               <div>
@@ -328,7 +328,7 @@ const BookAppointment = () => {
             </div>
           </div>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+          <div className="bg-yellow-100 border border-yellow-200 rounded-lg p-6">
             <div className="flex items-start space-x-3">
               <AlertTriangle className="h-6 w-6 text-yellow-600 flex-shrink-0 mt-1" />
               <div>

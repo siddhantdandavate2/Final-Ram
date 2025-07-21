@@ -13,13 +13,13 @@ const InsuranceLogos = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16">
+    <div className="bg-[#F5EFEB] py-16">
       <div className="max-w-auto mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          <h3 className="text-2xl font-bold text-[#567C8D] mb-4">
             Insurance Partners
           </h3>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="text-[#567C8D] max-w-xl mx-auto">
             We work with leading insurance providers to ensure you receive the care you need.
           </p>
         </div>
@@ -28,7 +28,7 @@ const InsuranceLogos = () => {
           {insurancePartners.map((partner, index) => (
             <div
               key={index}
-              className="w-40 h-40 flex flex-col justify-center items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="w-40 h-40 flex flex-col justify-center items-center p-4 bg-[#F5EFEB] rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-shadow duration-300"
             >
               <img
                 src={`/${partner.image}`}

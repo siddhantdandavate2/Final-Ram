@@ -51,15 +51,15 @@ const Services = () => {
   ];
 
   return (
-  <div className="py-16 pt-24 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+  <div className="py-16 pt-24 px-4 sm:px-6 lg:px-8 overflow-x-hidden bg-[#F5EFEB]">
     <div className="max-w-7xl mx-auto">
 
       {/* Header */}
       <div className="text-center mb-12 sm:mb-16">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#567c8d] mb-4">
           Our Services
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-[#567c8d] max-w-3xl mx-auto">
           Comprehensive pain management services tailored to your individual needs and condition
         </p>
       </div>
@@ -75,11 +75,11 @@ const Services = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-white p-5 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary"
+                className="bg-[#F5EFEB] p-5 sm:p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-102 duration-300 border border-[#F5EFEB]"
               >
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-primary rounded-full mr-3" />
-                  <span className="text-gray-800 font-medium text-sm sm:text-base">
+                  <div className="w-3 h-3 bg-[#2f4156] rounded-full mr-3" />
+                  <span className="text-[#567c8d] font-medium text-sm sm:text-base">
                     {treatment}
                   </span>
                 </div>
@@ -90,26 +90,26 @@ const Services = () => {
       </section>
 
       {/* Fees Section */}
-      <div className="bg-gray-50 rounded-lg p-6 sm:p-8 mt-12">
+      <div className="bg-[#F5EFEB] rounded-lg p-6 sm:p-8 mt-12">
         <div className="flex items-center mb-6">
-          <div className="bg-primary/10 rounded-full p-3 sm:p-4">
-            <PoundSterling className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+          <div className="bg-[#567c8d]/10 rounded-full p-3 sm:p-4">
+            <PoundSterling className="h-6 w-6 sm:h-8 sm:w-8 text-[#567c8d]" />
           </div>
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 ml-4">Fees & Pricing</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-[#567c8d] ml-4">Fees & Pricing</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8">
           {/* Service Fees */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Service Fees</h3>
+            <h3 className="text-lg font-semibold text-[#567c8d] mb-4">Service Fees</h3>
             <div className="space-y-4">
               {feeStructure.map((item, index) => (
-                <div key={index} className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
+                <div key={index} className="flex justify-between items-center p-4 bg-[#F5EFEB] rounded-lg shadow-sm">
                   <div>
-                    <h4 className="font-medium text-gray-800">{item.service}</h4>
-                    <p className="text-sm text-gray-500">{item.duration}</p>
+                    <h4 className="font-medium text-[#567c8d]">{item.service}</h4>
+                    <p className="text-sm text-[#567c8d]">{item.duration}</p>
                   </div>
-                  <span className="text-base sm:text-lg font-bold text-primary">{item.price}</span>
+                  <span className="text-base sm:text-lg font-bold text-[#567c8d]">{item.price}</span>
                 </div>
               ))}
             </div>
@@ -117,24 +117,24 @@ const Services = () => {
 
           {/* Important Info */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Important Information</h3>
+            <h3 className="text-lg font-semibold text-[#567c8d] mb-4">Important Information</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+              <div className="flex items-start space-x-3 p-4 bg-[#F5EFEB] rounded-lg">
+                <Clock className="h-5 w-5 text-[#567c8d] mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-medium text-gray-800">Cancellation Policy</h4>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <h4 className="font-medium text-[#567c8d]">Cancellation Policy</h4>
+                  <p className="text-sm text-[#567c8d] mt-1">
                     Appointments cancelled with less than 24 hours notice will incur the full cost of the appointment.
                     This appointment and the fee paid do not include treatment or investigations.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-3 p-4 bg-white rounded-lg">
-                <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+              <div className="flex items-start space-x-3 p-4 bg-[#F5EFEB] rounded-lg">
+                <Phone className="h-5 w-5 text-[#567c8d] mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-medium text-gray-800">Contact Notice</h4>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <h4 className="font-medium text-[#567c8d]">Contact Notice</h4>
+                  <p className="text-sm text-[#567c8d] mt-1">
                     Insured patients should contact their insurer directly and liaise with secretary Ms Pizzey.
                   </p>
                 </div>
@@ -144,7 +144,7 @@ const Services = () => {
         </div>
 
         {/* Special Note */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-5 sm:p-6">
+        <div className="bg-yellow-100 border border-yellow-200 rounded-lg p-5 sm:p-6">
           <div className="flex items-start space-x-3">
             <AlertTriangle className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
             <div>
