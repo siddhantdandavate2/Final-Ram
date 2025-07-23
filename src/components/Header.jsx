@@ -23,9 +23,13 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo and Title */}
           <div className="flex items-center">
-            <div className="mr-4">
+            <div className="mr-4 overflow-hidden">
               <img
-                className="w-auto max-w-[70px] sm:max-w-[80px] md:max-w-[90px] h-auto"
+                className="w-auto max-w-[70px] sm:max-w-[80px] md:max-w-[90px] h-auto object-cover object-top"
+                style={{ 
+                  height: '60px',
+                  clipPath: 'inset(0 0 40% 0)'
+                }}
                 src="/logo.png"
                 alt="Maxcare Logo"
               />
