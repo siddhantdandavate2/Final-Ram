@@ -25,14 +25,17 @@ const Header = () => {
           <div className="flex items-center">
             <div className="mr-4">
               <img
-                className="w-auto max-w-[140px] sm:max-w-[160px]"
-                src="new_logo.png"
+                className="w-auto max-w-[50px] sm:max-w-[60px] h-auto"
+                src="doctor logo 1.png"
                 alt="Maxcare Logo"
+                style={{
+                  filter: 'hue-rotate(200deg) saturate(0.8) brightness(0.9)'
+                }}
               />
             </div>
             <Link
               to="/"
-              className="text-lg sm:text-xl md:text-2xl font-bold text-[#2F4156] whitespace-nowrap"
+              className="text-lg sm:text-xl md:text-2xl font-bold text-[#567C8D] whitespace-nowrap"
             >
               <span className="text-[#567C8D]">Maxcare</span> Pain Clinic
             </Link>
