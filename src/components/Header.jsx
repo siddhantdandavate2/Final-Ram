@@ -26,11 +26,8 @@ const Header = () => {
             <div className="mr-4">
               <img
                 className="w-auto max-w-[50px] sm:max-w-[60px] h-auto"
-                src="doctor logo 1.png"
+                src="/logo.png"
                 alt="Maxcare Logo"
-                style={{
-                  filter: 'hue-rotate(200deg) saturate(0.8) brightness(0.9)'
-                }}
               />
             </div>
             <Link
