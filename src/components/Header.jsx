@@ -30,6 +30,11 @@ const Header = () => {
                 alt="Maxcare Logo"
               />
             </div>
+            <div>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#567C8D]">
+                <span className="text-[#2F4156]">Maxcare</span> Pain Clinic
+              </h1>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
