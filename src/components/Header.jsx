@@ -23,20 +23,16 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo and Title */}
           <div className="flex items-center">
-            <div className="mr-4 overflow-hidden">
+            <div className="mr-3 sm:mr-4 flex-shrink-0">
               <img
-                className="w-auto max-w-[70px] sm:max-w-[80px] md:max-w-[90px] h-auto object-cover object-top"
-                style={{ 
-                  height: '60px',
-                  clipPath: 'inset(0 0 40% 0)'
-                }}
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
                 src="/logo.png"
                 alt="Maxcare Logo"
               />
             </div>
             <Link
               to="/"
-              className="text-lg sm:text-xl md:text-2xl font-bold text-[#567C8D] whitespace-nowrap"
+              className="text-xl sm:text-2xl md:text-3xl font-bold text-[#567C8D] whitespace-nowrap"
             >
               <span className="text-[#567C8D]">Maxcare</span> Pain Clinic
             </Link>
