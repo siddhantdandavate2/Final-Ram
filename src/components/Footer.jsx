@@ -1,5 +1,6 @@
 
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,18 +47,18 @@ const Footer = () => {
           <div>
             <h4 className="text-xl sm:text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2 text-sm sm:text-base">
-              <a href="/about" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
+              <Link to="/about" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
                 About Dr. Ram Dhotarkar
-              </a>
-              <a href="/services" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
+              </Link>
+              <Link to="/services" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
                 Our Services
-              </a>
-              <a href="/faqs" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
+              </Link>
+              <Link to="/faqs" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
                 FAQs
-              </a>
-              <a href="/contact" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
+              </Link>
+              <Link to="/contact" className="block text-[#F5EFEB] hover:text-[#2f4156] transition-colors">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
