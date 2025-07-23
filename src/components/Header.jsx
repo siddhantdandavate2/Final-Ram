@@ -25,7 +25,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="mr-4">
               <img
-                className="w-auto max-w-[50px] sm:max-w-[60px] h-auto"
+                className="w-auto max-w-[70px] sm:max-w-[80px] md:max-w-[90px] h-auto"
                 src="/logo.png"
                 alt="Maxcare Logo"
               />
